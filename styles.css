@@ -1,0 +1,131 @@
+ @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Ubuntu Mono", monospace;
+}
+
+nav {
+  background-color: rgb(83, 13, 78);
+  color: white;
+  height: 60px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  /* background-color: ; */
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows:repeat(3, 10vw) ;
+  grid-template-columns:repeat(3, 10vw) ;
+  position: relative;
+}
+
+.box{
+  border: 2px solid black;
+  font-size: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color:rgb(240, 227, 239);
+  cursor: pointer;
+}
+
+.gameinfo{
+  padding: 34px;
+  font-family: 'Ubuntu Mono', monospace;
+}
+.gameinfo h1{
+  margin-bottom: 20px;
+  margin-left: 60px;
+  font-size: 2rem;
+}
+
+.imgbox{
+  width:0px;  
+  /* border: 20px solid black; */
+  transition: width 1s ease-in-out;
+  /* display: none; */
+}
+
+.br-0{
+  border-right: 0;
+}
+.bl-0{
+  border-left: 0;
+}
+.bt-0{
+  border-top: 0;
+}
+.bb-0{
+  border-bottom: 0;
+}
+
+#reset{
+  margin:0px 23px;
+  padding: 7px 25px;
+  background-color: rgb(195, 177, 212);
+  border-radius:10px ;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: 600;
+
+}
+.line{
+  background-color: black;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  background-color: #911d91;
+  transition: width 1s ease-in-out;
+}
+
+span.info{
+  margin-left: 60px;
+  font-size: 27px;
+   color: red;
+   font-weight: 700;
+}
+
+
+
+/* css media query */
+@media  screen and (max-width:950px){
+  .gameContainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 34px;
+  }
+  .gameinfo h1{
+    font-size: 1.5rem;
+  }
+  .container{
+    display: grid;
+    grid-template-rows:repeat(3, 20vw) ;
+    grid-template-columns:repeat(3, 20vw) ;
+  }
+  .info{
+    margin: auto;
+  }
+ } 
